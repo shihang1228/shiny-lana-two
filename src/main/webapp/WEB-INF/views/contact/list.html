@@ -1,35 +1,8 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>contactList</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
-    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap.min.js}"></script>
-</head>
-<body>
-<div class="container">
-    <!-- /* Handle the flash message */-->
-    <th:block th:if="${message != null}">
-        <!-- /* The message code is returned from the @Controller */ -->
-        <div th:replace="fragments/alert :: alert (type=${#strings.toLowerCase(message.type)}, message=#{${message.message}(${#authentication.name})})">&nbsp;</div>
-    </th:block>
-    <center><h2>Contact List</h2></center>
-    <table border="1" align="center">   
-      <tr>
-        <th>Name</th>
-        <th>Mobile</th>
-        <th>Vpmn</th>
-        <th>Address</th>
-      </tr>
-       <tr th:each="contact : ${contactList}">
-        <td th:text="${contact.name}"></td>
-        <td th:text="${contact.mobile}"></td>
-        <td th:text="${contact.vpmn}"></td>
-        <td th:text="${contact.homeAddress}"></td>
-      </tr>
-    </table>
-</div>
-</body>
+    <head>
+        <title>ContactList</title>
+    </head>
+    <body>
+        <h1>Contact List</h1>
+    </body>
 </html>
